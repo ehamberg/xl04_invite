@@ -1,9 +1,9 @@
     _____ _____ _____ _____ _____
-   |  |  |     |   | |     |  |  |    
-   |     |   --|     |   | |     |   
-   |-   -|     |     |   | |-   -|   
-   |     |   --|     |   | |     |   
-   |__|__|_____|_|___|_____|__|__|   
+   |  |  |     |   | |     |  |  |
+   |     |   --|     |   | |     |
+   |-   -|     |     |   | |-   -|
+   |     |   --|     |   | |     |
+   |__|__|_____|_|___|_____|__|__|
 
        X L  2 0 0 4  I N V I TE
 
@@ -12,7 +12,7 @@ Credits:
 
 
    Kode, design, grafikk :  morbuz
-            idé, testing :  caesara
+            idÃ©, testing :  caesara
               ascii-logo :  nicomen
                   musikk :  kenet
 
@@ -22,24 +22,24 @@ Credits:
 ----------------------------------------
 Systemkrav:
 
-  * 3D-kort med OpenGL-støtte
+  * 3D-kort med OpenGL-stÃ¸tte
   * En moderne linux-distro (andre *nix
-    burde også fungere) eller
+    burde ogsÃ¥ fungere) eller
     Microsoft(R) Windows(TM) 98 eller
     nyere
 
 ----------------------------------------
 Linux/UNIX:
 
-  Binærfilen som følger med burde
-  fungere på alle moderne distribusjoner
-  så lenge SDL, SDL_mixer og libpng er
+  BinÃ¦rfilen som fÃ¸lger med burde
+  fungere pÃ¥ alle moderne distribusjoner
+  sÃ¥ lenge SDL, SDL_mixer og libpng er
   installert.
-  For å kompilere trenger du, litt
+  For Ã¥ kompilere trenger du, litt
   avhengig av distrobusjonen din,
   development-pakker av nevnte
   bibliotek.
-  Programmet er bare testet på Linux,
+  Programmet er bare testet pÃ¥ Linux,
   men burde fungere fint under andre
   *nix-varianter som FreeBSD.
 
