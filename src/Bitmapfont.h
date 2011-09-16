@@ -21,7 +21,6 @@ class Bitmapfont
 
 	private:
 		Texture *fontMap;
-		char *characters;
 		int characterWidth;
 		int characterHeight;
 

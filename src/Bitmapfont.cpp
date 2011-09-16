@@ -7,17 +7,17 @@
 
 using std::string;
 
+static const char* characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ∆ÿ≈ .,!?:;(){}<>\"'@*=+-|/\\_Ø";
+
 Bitmapfont::Bitmapfont()
 {
 	fontMap = new Texture("data/font.png");
-	characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ∆ÿ≈ .,!?:;(){}<>\"'@*=+-|/\\_Ø";
 	characterWidth = 16;
 	characterHeight = 32;
 }
 Bitmapfont::Bitmapfont(const char* filename)
 {
 	fontMap = new Texture(filename);
-	characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ∆ÿ≈ .,!?:;(){}<>\"'@*=+-|/\\_Ø";
 	characterWidth = 16;
 	characterHeight = 32;
 }
@@ -25,7 +25,6 @@ Bitmapfont::Bitmapfont(const char* filename)
 Bitmapfont::Bitmapfont(const char* filename, int char_width, int char_height)
 {
 	fontMap = new Texture(filename);
-	characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ∆ÿ≈ .,!?:;(){}<>\"'@*=+-|/\\_Ø";
 	characterWidth = char_width;
 	characterHeight = char_height;
 }
@@ -71,11 +70,11 @@ void Bitmapfont::drawString(SDL_Surface *surface, int x, int y, string s)
 void Bitmapfont::getCharacterPosition(char c, float* s, float* t)
 {
 	int pos = 0;
-	char *p = characters;
+	const char *p = characters;
 
 	// if c is lowercase, subtract 32 to make it uppercase
 	if ((int)c >= 97 && (int)c <= 122)
-		(int)c -= 32;
+		c -= 32;
 	// special cases for Ê, ¯ and Â
 	else if (c == (int)'Ê')
 		c = '∆';
