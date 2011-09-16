@@ -1,0 +1,59 @@
+# Project: xl04
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = src/About.o src/Bitmapfont.o src/Intro.o src/main.o src/Music.o src/Particle.o src/PNGImage.o src/Scene.o src/Scroller.o src/SDLWindow.o src/Texture.o $(RES)
+LINKOBJ  = src/About.o src/Bitmapfont.o src/Intro.o src/main.o src/Music.o src/Particle.o src/PNGImage.o src/Scene.o src/Scroller.o src/SDLWindow.o src/Texture.o $(RES)
+LIBS =  -L"M:/WINDOWS/Dev-Cpp/lib" -lmingw32 -lSDLmain -lopengl32 -lglu32 -lSDL -lSDL_mixer -lpng 
+INCS =  -I"M:/WINDOWS/Dev-Cpp/include" 
+CXXINCS =  -I"M:/WINDOWS/Dev-Cpp/include/c++"  -I"M:/WINDOWS/Dev-Cpp/include/c++/mingw32"  -I"M:/WINDOWS/Dev-Cpp/include/c++/backward"  -I"M:/WINDOWS/Dev-Cpp/include" 
+BIN  = xl04.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS = $(INCS) 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before xl04.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "xl04.exe" $(LIBS)
+
+src/About.o: src/About.cpp
+	$(CPP) -c src/About.cpp -o src/About.o $(CXXFLAGS)
+
+src/Bitmapfont.o: src/Bitmapfont.cpp
+	$(CPP) -c src/Bitmapfont.cpp -o src/Bitmapfont.o $(CXXFLAGS)
+
+src/Intro.o: src/Intro.cpp
+	$(CPP) -c src/Intro.cpp -o src/Intro.o $(CXXFLAGS)
+
+src/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/Music.o: src/Music.cpp
+	$(CPP) -c src/Music.cpp -o src/Music.o $(CXXFLAGS)
+
+src/Particle.o: src/Particle.cpp
+	$(CPP) -c src/Particle.cpp -o src/Particle.o $(CXXFLAGS)
+
+src/PNGImage.o: src/PNGImage.cpp
+	$(CPP) -c src/PNGImage.cpp -o src/PNGImage.o $(CXXFLAGS)
+
+src/Scene.o: src/Scene.cpp
+	$(CPP) -c src/Scene.cpp -o src/Scene.o $(CXXFLAGS)
+
+src/Scroller.o: src/Scroller.cpp
+	$(CPP) -c src/Scroller.cpp -o src/Scroller.o $(CXXFLAGS)
+
+src/SDLWindow.o: src/SDLWindow.cpp
+	$(CPP) -c src/SDLWindow.cpp -o src/SDLWindow.o $(CXXFLAGS)
+
+src/Texture.o: src/Texture.cpp
+	$(CPP) -c src/Texture.cpp -o src/Texture.o $(CXXFLAGS)
