@@ -47,4 +47,4 @@ Linux/UNIX:
 
 
 Tue Feb 17 22:15:09 CET 2004
-Erlend Hamberg, ehamberg@online.no
+Erlend Hamberg
