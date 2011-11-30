@@ -8,7 +8,7 @@ OBJS=src/main.o src/SDLWindow.o src/PNGImage.o src/Texture.o src/Music.o\
 	src/Scroller.o
 
 CXX=g++
-CXXFLAGS=-O2 -Wall -ansi -pedantic `sdl-config --cflags` `pkg-config libpng --cflags`
+CXXFLAGS=-O2 -Wall -ansi -pedantic -I/usr/X11/include/ `sdl-config --cflags` `pkg-config libpng --cflags`
 LIBS=`sdl-config --libs` -lGL -lGLU -lSDL_mixer `pkg-config libpng --libs`
 TARGET=xl04_invite
 
