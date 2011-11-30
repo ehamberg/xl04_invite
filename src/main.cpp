@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-	SDLWindow *mainWin = new SDLWindow("Xenox XL 2004", 640, 480, 16);
+	SDLWindow *mainWin = new SDLWindow(strdup("Xenox XL 2004"), 640, 480, 16);
 	SDL_EnableKeyRepeat(300, 40);
 
 	Intro* in = new Intro(mainWin->screen);
