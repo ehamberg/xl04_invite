@@ -4,6 +4,7 @@
 #include <string>
 #include <GL/gl.h>
 #include <png.h>
+#include <stdlib.h>
 #include <assert.h>
 #include "PNGImage.h"
 
