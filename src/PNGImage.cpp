@@ -4,7 +4,6 @@
 #include <string>
 #include <GL/gl.h>
 #include <png.h>
-#include <stdlib.h>
 #include <assert.h>
 #include "PNGImage.h"
 
@@ -55,8 +54,11 @@ PNGImage::PNGImage (const char *filename)
 	}
 
 	// use libpngs default error handling
-	if (setjmp(png_ptr->jmpbuf))
+
+	jmp_buf* jmp_context = (jmp_buf*) png_get_error_ptr(png_ptr);
+	if (jmp_context) {
 		cerr << "PNG: setjmp() failed\n";
+	}
 
 	png_init_io(png_ptr, fp);
 	png_read_info(png_ptr, info_ptr);
@@ -107,8 +109,7 @@ PNGImage::PNGImage (const char *filename)
 	png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
 
 	if (row_pointers){
-		if (row_pointers)
-			free(row_pointers);
+		free(row_pointers);
 	}
 
 	fclose(fp);
