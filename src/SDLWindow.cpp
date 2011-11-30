@@ -12,8 +12,7 @@ SDLWindow::SDLWindow(char *caption, int resolutionX, int resolutionY, int bpp)
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, bpp);
 
-	screen = SDL_SetVideoMode(resolutionX, resolutionY, bpp, SDL_OPENGL |
-			SDL_FULLSCREEN);
+	screen = SDL_SetVideoMode(resolutionX, resolutionY, bpp, SDL_OPENGL);
 
 	if (!screen)
 		cerr << "Couldn't set video mode: " << SDL_GetError() << endl;
